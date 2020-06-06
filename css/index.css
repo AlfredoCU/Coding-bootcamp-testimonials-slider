@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+/******* Global *******/
+body {
+  font-weight: 300;
+  color: hsl(240, 38%, 20%);
+  font-family: "Inter", sans-serif;
+}
+
+/******* Slider *******/
+.slider {
+  padding-top: 50px;
+  position: relative;
+}
+
+.slide {
+  flex-direction: column;
+}
+
+.slider__image {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__person {
+  z-index: 1;
+  width: 198px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.slider__person--shadow {
+  z-index: 1;
+  box-shadow: -5px 30px 50px -25px rgb(74, 71, 119);
+}
+
+.slider__button {
+  top: 229px;
+  right: 49.5%;
+  z-index: 2;
+
+  width: 31px;
+  height: 35px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+  border-radius: 50% 0 0 50%;
+}
+
+.slider__button--right {
+  top: 229px;
+  left: 50%;
+  z-index: 2;
+
+  width: 31px;
+  height: 35px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 50% 50% 0;
+}
+
+.slider__testimonial {
+  padding: 55px;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  position: relative;
+}
+
+.slider__name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.slider__work {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -15px;
+  color: hsl(240, 18%, 77%);
+}
+
+/******* Footer *******/
+.attribution {
+  display: none;
+  padding: 10px;
+  font-size: 11px;
+  position: relative;
+}
+
+.attribution a {
+  font-weight: 700;
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+/******* SVG *******/
+.pattern-bg {
+  top: 27px;
+  width: 257px;
+  height: 240px;
+  position: absolute;
+}
+
+.icon-prev {
+  width: 8px;
+}
+
+.icon-next {
+  width: 8.5px;
+}
+
+.pattern-quotes {
+  top: 52px;
+  left: 43.5%;
+  width: 47px;
+  height: auto;
+  position: absolute;
+}
+
+.pattern-curve {
+  width: 80%;
+  bottom: 0px;
+  height: auto;
+  position: fixed;
+}
+
+/******* Animation *******/
+.opacity {
+  animation-name: opacity;
+  animation-duration: 1.5s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/******* Tablet *******/
+@media screen and (min-width: 640px) {
+  .slider__person {
+    width: 230px;
+  }
+
+  .pattern-bg {
+    top: 24px;
+    width: 299px;
+    height: 270px;
+  }
+
+  .slider__button {
+    top: 260px;
+    width: 38px;
+  }
+
+  .slider__button--right {
+    top: 260px;
+    width: 38px;
+  }
+
+  .icon-prev {
+    width: 10px;
+  }
+
+  .icon-next {
+    width: 11.5px;
+  }
+
+  .pattern-quotes {
+    top: 48px;
+    width: 60px;
+  }
+
+  .slider__name {
+    font-size: 17px;
+  }
+
+  .slider__work {
+    font-size: 17px;
+  }
+
+  .attribution {
+    display: block;
+  }
+
+  .pattern-curve {
+    width: 75%;
+    height: 100px;
+  }
+}
+
+/******* Tablet *******/
+@media screen and (min-width: 780px) and (max-width: 1023px) {
+  .pattern-quotes {
+    top: 43px;
+    width: 60px;
+  }
+
+  .slider__testimonial {
+    font-size: 19px;
+    line-height: 20px;
+  }
+}
+
+/******* Laptops *******/
+@media screen and (min-width: 1024px) {
+  .slider {
+    padding: 0;
+  }
+
+  .slide {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .slider__image {
+    position: relative;
+    padding-right: 200px;
+  }
+
+  .slider__person {
+    width: 390px;
+  }
+
+  .pattern-bg {
+    top: -46px;
+    right: 140px;
+    width: 500px;
+    height: auto;
+  }
+
+  .slider__content-button {
+    top: 76%;
+    right: 459px;
+    position: absolute;
+  }
+
+  .slider__button {
+    top: 10px;
+    right: 46px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .slider__button--right {
+    top: 10px;
+    left: -47px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-prev {
+    width: 12px;
+  }
+
+  .icon-next {
+    width: 12.5px;
+  }
+
+  .pattern-quotes {
+    top: 25px;
+    left: 116px;
+    width: 76px;
+  }
+
+  .slider__testimonial {
+    top: 25px;
+    left: 7.3%;
+    width: 49%;
+    z-index: 3;
+    font-size: 19px;
+    text-align: left;
+    line-height: 25px;
+    padding: 60px 0px 60px 60px;
+  }
+
+  .slider__content {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .slider__message {
+    margin: auto;
+  }
+
+  .slider__name {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .slider__work {
+    font-size: 20px;
+  }
+
+  .pattern-curve {
+    width: 550px;
+  }
+
+  .attribution {
+    display: flex;
+    position: static;
+    margin-top: -35px;
+    justify-content: flex-end;
+  }
+}
+
+/******* Laptops *******/
+@media screen and (min-width: 1224px) {
+  .slider__testimonial {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .pattern-quotes {
+    top: 8px;
+    left: 153px;
+    width: 100px;
+  }
+}
