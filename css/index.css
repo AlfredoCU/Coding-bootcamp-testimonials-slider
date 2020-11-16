@@ -37,7 +37,7 @@ body {
 .slider__button {
   top: 229px;
   right: 49.5%;
-  z-index: 2;
+  z-index: 9999;
 
   width: 31px;
   height: 35px;
@@ -53,7 +53,7 @@ body {
 .slider__button--right {
   top: 229px;
   left: 50%;
-  z-index: 2;
+  z-index: 9999;
 
   width: 31px;
   height: 35px;
@@ -84,6 +84,43 @@ body {
   font-weight: 500;
   margin-top: -15px;
   color: hsl(240, 18%, 77%);
+}
+
+.slider__content-button-desktop {
+  display: none;
+  position: relative;
+}
+
+.slider__button-desktop {
+  top: 94%;
+  right: 310px;
+  z-index: 9999;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+  border-radius: 50% 0 0 50%;
+}
+
+.slider__button-desktop--right {
+  top: 94%;
+  left: -310px;
+  z-index: 9999;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 50% 50% 0;
 }
 
 /******* Footer *******/
@@ -133,8 +170,7 @@ body {
 
 /******* Animation *******/
 .opacity {
-  animation-name: opacity;
-  animation-duration: 1.5s;
+  animation: opacity 1.5s;
 }
 
 @keyframes opacity {
@@ -190,10 +226,6 @@ body {
     font-size: 17px;
   }
 
-  .attribution {
-    display: block;
-  }
-
   .pattern-curve {
     width: 75%;
     height: 100px;
@@ -243,23 +275,11 @@ body {
   }
 
   .slider__content-button {
-    top: 76%;
-    right: 459px;
-    position: absolute;
+    display: none;
   }
 
-  .slider__button {
-    top: 10px;
-    right: 46px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .slider__button--right {
-    top: 10px;
-    left: -47px;
-    width: 45px;
-    height: 45px;
+  .slider__content-button-desktop {
+    display: block;
   }
 
   .icon-prev {
@@ -277,14 +297,14 @@ body {
   }
 
   .slider__testimonial {
-    top: 25px;
+    top: 50px;
     left: 7.3%;
     width: 49%;
     z-index: 3;
     font-size: 19px;
     text-align: left;
     line-height: 25px;
-    padding: 60px 0px 60px 60px;
+    /* padding: 60px 0px 60px 60px; */
   }
 
   .slider__content {
@@ -294,6 +314,7 @@ body {
 
   .slider__message {
     margin: auto;
+    /* line-height: 35px; */
   }
 
   .slider__name {
@@ -321,12 +342,16 @@ body {
 @media screen and (min-width: 1224px) {
   .slider__testimonial {
     font-size: 32px;
-    line-height: 35px;
+    line-height: 42px;
   }
 
   .pattern-quotes {
-    top: 8px;
+    top: 7px;
     left: 153px;
     width: 100px;
+  }
+
+  .slider__testimonial {
+    width: 100%;
   }
 }
